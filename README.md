@@ -1,44 +1,42 @@
-# Air Draw
-This example is sped up just to show functionality, real-time examples shown below:
-## Demo of Functionality
-![Demo of all functionality: Draw, Hover, Erase, and Translate](./demo_gifs/demo.gif)
+Air Doodle – Real-Time Air Drawing Using OpenCV
 
+Overview
 
-## Setup
-<b>NOTE</b> This setup is just for what I use (Ubuntu 20.04). While I am willing to bet this will work for windows and unix, just be safe!
-### Virtual environment
-`python3 -m venv venv`
-### Install Dependencies
-`source ./venv/bin/activate`
+Air Doodle is a computer vision-based application that enables users to draw on a virtual canvas using hand gestures in real time. Developed with Python and OpenCV, the application tracks hand movements through a webcam and translates finger movements into drawing actions without requiring a physical input device.
 
-`pip3 install -r requirements.txt`
-### Run program
-`python3 airdraw.py`
+Features
 
-## Available Gestures
+- Real-time hand tracking using a webcam.
+- Gesture-based drawing on a virtual canvas.
+- Touchless interaction using finger movements.
+- Live visualization of hand movements.
+- Interactive drawing experience using computer vision.
 
-### Drawing
-![Draw: drawing directly on screen](./demo_gifs/drawing.gif)
+Technologies Used
 
-### Hovering
-![Hover: Move across the screen passively](./demo_gifs/hovering.gif)
+- Python
+- OpenCV
+- Computer Vision
+- NumPy
 
-### Erasing
-![Erase: Remove all drawings within radius](./demo_gifs/erasing.gif)
+How It Works
 
-### Translation
-![Translation: Move shapes around the screen](./demo_gifs/translating.gif)
+1. Captures live video through the webcam.
+2. Processes video frames to track hand movements.
+3. Identifies finger positions and converts them into drawing coordinates.
+4. Updates the virtual canvas based on detected hand movements.
 
-## Why?
-I've seen tons of attempts of this sort of thing with HSV masks and dying your fingers a certain color, and while it's more true to image processing that openCV caters for, I was sort of against letting our own styluses [go to waste](https://money.cnn.com/2015/09/10/technology/apple-pencil-steve-jobs-stylus/index.html).
-Once I found out about [mediapipe](https://google.github.io/mediapipe/), I decided I would give this thing a shot! What you see is my attempt at materializing the idea, there is a more detailed [writeup](https://arefmalek.github.io/blog/Airdraw/) on my blog. 
+Applications
 
-## How?
-Like I mentioned before, the ML workhorse here is definitely mediapipe. They've got awesome ML solutions so we can quickly gather data on the hand and use what we gather rather quickly. Other than that I pretty reliantly used OpenCV for image manipulation and NumPy for some basic dot products and because OpenCV uses numpy to represent images.
+- Touchless human-computer interaction.
+- Gesture-based interfaces.
+- Computer vision learning and experimentation.
+- Interactive digital drawing systems.
 
-The conversion from hand data to lines / functionality is primarily done with some Python, basic linear algebra, and OpenCV. I'll leave the rest in the blog post. 
+Project Objective
 
-## What's next?
-Definitely want to make this more available to everyone, so an upcoming goal will be to write this as a webapp, hopefully within the next month or so, I'll keep everyone posted :). 
+To demonstrate the practical application of computer vision and real-time hand tracking by developing an interactive, touch-free drawing system.
 
-Thanks for reading :)
+Author
+
+Priyadarshini K C
